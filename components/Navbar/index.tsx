@@ -22,18 +22,18 @@ export default function Navbar() {
           >
             {!session && (
               <>
-                <span>
-                  You are not signed in
-                </span>
-                <a
-                  href={`/api/auth/signin`}
-                  onClick={(e) => {
-                    e.preventDefault();
-                    signIn();
-                  }}
-                >
-                  Sign in
-                </a>
+                <span>You are not signed in</span>
+                <button className={`${styles.button} ${styles.buttonPrimary}`}>
+                  <a
+                    href={`/api/auth/signin`}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      signIn();
+                    }}
+                  >
+                    Sign in
+                  </a>
+                </button>
               </>
             )}
             {session?.user && (
