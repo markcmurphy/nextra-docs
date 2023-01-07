@@ -1,29 +1,39 @@
 {
-  "index": "Overview",
-  "--Rapidoc": {
-    "title": "Rapidoc",
-    "type": "separator"
-  },
-  "pages": {
-    "title": "Pages",
+  "*": {
     "theme": {
-      "layout": "full"
+      "breadcrumb": true,
+      "footer": true,
+      "sidebar": true,
+      "toc": true,
+      "pagination": true
     }
   },
-  "ReadView": {
-    "title": "Pages::ReadView",
-    "theme": {
-      "layout": "raw"
-    }
+  "index": {
+    "title": "Tools & Resources",
+    "display": "hidden"
   },
-  "--Redoc": {
-    "title": "Redoc",
-    "type": "separator"
+  "Api Client": {
+    "title": "Api Client",
+    "href": "#api-clients"
   },
-  "redoc": {
-    "title": "Pages",
-    "theme": {
-      "layout": "full"
-    }
+  "SDKs": {
+    "title": "SDKs",
+    "href": "#sdks"
+  },
+  "BigDesign": {
+    "title": "Big Design",
+    "href": "#bigdesign"
+  },
+  "Headless Integrations": {
+    "title": "Headless Integrations",
+    "href": "#headless-integrations"
+  },
+  "Theme Resources": {
+    "title": "Theme Resources",
+    "href": "#theme-resources"
+  },
+  "Foundations": {
+    "title": "Foundations",
+    "href": "#foundations"
   }
 }

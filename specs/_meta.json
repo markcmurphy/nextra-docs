@@ -13,7 +13,7 @@
   "ReadView": {
     "title": "Pages::ReadView",
     "theme": {
-      "layout": "raw"
+      "layout": "full"
     }
   },
   "--Redoc": {

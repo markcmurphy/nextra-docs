@@ -1,0 +1,12 @@
+{
+  "index": "Overview",
+  "pages": {
+    "title": "Pages V3",
+    "theme": {
+      "layout": "full"
+    }
+  },
+  "scrollTo": {
+    "title": "scrollTo!"
+  }
+}
