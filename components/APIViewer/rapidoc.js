@@ -5,7 +5,9 @@ const RapidocViewer = ({ renderStyle = 'view' }) => {
   const [componentLoaded, setComponentLoaded] = useState(false);
   const { resolvedTheme } = useTheme();
 
-  useEffect(() => {
+  //gist.githack.com/markcmurphy/ca3ed91e595cb3a74a31e1d0dd705a6a/raw/55e8d6d58c2b463d0b6e958b4df3bfafd5ada6a0/rapidoc-min.js
+
+  https: useEffect(() => {
     import('rapidoc').then(() => {
       setComponentLoaded(true);
     });
