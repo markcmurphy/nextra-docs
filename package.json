@@ -4,7 +4,7 @@
   "description": "Nextra docs starter repository",
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build --legacy-peer-deps",
     "start": "next start",
     "postinstall": "patch-package"
   },
