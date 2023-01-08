@@ -1,0 +1,4 @@
+[[redirects]]
+  from = "/api/try-it/*"
+  to = "https://api.bigcommerce.com/:splat"
+  status = 200

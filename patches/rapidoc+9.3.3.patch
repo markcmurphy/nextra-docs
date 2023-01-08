@@ -1,0 +1,21 @@
+diff --git a/node_modules/rapidoc/src/components/api-request.js b/node_modules/rapidoc/src/components/api-request.js
+index ef97929..7de5b8d 100644
+--- a/node_modules/rapidoc/src/components/api-request.js
++++ b/node_modules/rapidoc/src/components/api-request.js
+@@ -1134,6 +1134,7 @@ export default class ApiRequest extends LitElement {
+   }
+ 
+   async onTryClick(e) {
++    console.log('onTryClick')
+     // const me = this;
+     const tryBtnEl = e.target;
+     let fetchUrl;
+@@ -1268,7 +1269,7 @@ export default class ApiRequest extends LitElement {
+       });
+ 
+     // Final URL for API call
+-    fetchUrl = `${this.serverUrl.replace(/\/$/, '')}${fetchUrl}`;
++    fetchUrl = `${'/api/try-it/'.replace(/\/$/, '')}${fetchUrl}`;
+     if (fetchUrl.startsWith('http') === false) {
+       const url = new URL(fetchUrl, window.location.href);
+       curlUrl = url.href;
