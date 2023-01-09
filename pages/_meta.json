@@ -34,10 +34,6 @@
         "title": "RapiDocs::readView",
         "href": "/specs/ReadView"
       },
-      "Redoc": {
-        "title": "Redoc",
-        "href": "/specs/redoc"
-      },
       "Manual": {
         "title": "Manual",
         "href": "/manual-docs"
