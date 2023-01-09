@@ -14,15 +14,15 @@ export const authOptions: NextAuthOptions = {
       clientSecret: process.env.GITHUB_SECRET,
     }),
   ],
-  session: {
-    // Choose how you want to save the user session.
-    // The default is `"jwt"`, an encrypted JWT (JWE) stored in the session cookie.
-    // If you use an `adapter` however, we default it to `"database"` instead.
-    // You can still force a JWT session by explicitly defining `"jwt"`.
-    // When using `"database"`, the session cookie will only contain a `sessionToken` value,
-    // which is used to look up the session in the database.
-    strategy: 'jwt',
-  },
+  // session: {
+  //   // Choose how you want to save the user session.
+  //   // The default is `"jwt"`, an encrypted JWT (JWE) stored in the session cookie.
+  //   // If you use an `adapter` however, we default it to `"database"` instead.
+  //   // You can still force a JWT session by explicitly defining `"jwt"`.
+  //   // When using `"database"`, the session cookie will only contain a `sessionToken` value,
+  //   // which is used to look up the session in the database.
+  //   strategy: 'jwt',
+  // },
   // adapter: FirestoreAdapter({
   //   apiKey: process.env.FIREBASE_API_KEY,
   //   appId: process.env.FIREBASE_APP_ID,

@@ -1,5 +1,3 @@
-import type { GetStaticProps } from 'next';
-
 import { getLayout } from '@components/Layouts/PrimaryLayout';
 
 export default function Beta01 () {
