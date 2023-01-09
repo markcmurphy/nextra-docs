@@ -6500,7 +6500,7 @@ var middleware_default = (0, import_middleware.withAuth)({
     }
   }
 });
-var config = { matcher: ["/betas/betas02"] };
+var config = { matcher: ["/betas/path:*"] };
 export {
   config,
   middleware_default as default
