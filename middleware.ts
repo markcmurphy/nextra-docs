@@ -14,4 +14,4 @@ export default withAuth({
   },
 });
 
-export const config = { matcher: ['/betas/path:*'] };
+export const config = { matcher: ['/betas/:path*'] };
