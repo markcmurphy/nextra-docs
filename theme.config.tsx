@@ -34,6 +34,7 @@ const config: DocsThemeConfig = {
     ),
   },
   logo: <Logo />,
+  // faviconGlyph: "📚",
   project: {
     link: "https://github.com/bigcommerce/dev-docs",
   },

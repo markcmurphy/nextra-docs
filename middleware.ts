@@ -1,9 +1,16 @@
-import { NextRequest, NextResponse, userAgent } from 'next/server';
+import { withAuth } from 'next-auth/middleware';
 
-export function middleware(request: NextRequest) {
-  const url = request.nextUrl;
-  console.log("🚀 ~ file: middleware.ts:5 ~ middleware ~ url", url)
-  const { device } = userAgent(request);
-  const viewport = device.type === 'mobile' ? 'mobile' : 'desktop';
-  console.log('viewport', viewport);
-}
+export default withAuth({
+  callbacks: {
+    authorized: async ({ req, token }) => {
+      const pathname = req.nextUrl.pathname;
+
+      if (pathname.startsWith('/_next') || pathname === '/favicon.ico')
+        return true;
+
+      if (token) return true;
+
+      return false;
+    },
+  }
+});
