@@ -6404,13 +6404,13 @@ https://next-auth.js.org/errors#no_secret`);
         return handleMiddleware(...args);
       }
       if (typeof args[0] === "function") {
-        const middleware2 = args[0];
+        const middleware = args[0];
         const options2 = args[1];
         return async (...args2) => await handleMiddleware(args2[0], options2, async (token) => {
           args2[0].nextauth = {
             token
           };
-          return await middleware2(...args2);
+          return await middleware(...args2);
         });
       }
       const options = args[0];
@@ -6493,17 +6493,14 @@ var require_middleware2 = __commonJS({
 
 // middleware.ts
 var import_middleware = __toESM(require_middleware2());
-var middleware_default = (0, import_middleware.withAuth)(function middleware(req) {
-  console.log(req.nextauth.token);
-}, {
+var middleware_default = (0, import_middleware.withAuth)({
   callbacks: {
     authorized({ req, token }) {
-      if (token)
-        return true;
+      return !!token;
     }
   }
 });
-var config = { matcher: ["/betas/:path*"] };
+var config = { matcher: ["/betas/betas02"] };
 export {
   config,
   middleware_default as default
