@@ -1,0 +1,19 @@
+{
+	"geolocation": {
+		"data": {
+			"city": "Dallas",
+			"country": {
+				"code": "US",
+				"name": "United States"
+			},
+			"subdivision": {
+				"code": "TX",
+				"name": "Texas"
+			},
+			"timezone": "America/Chicago",
+			"latitude": 32.8964,
+			"longitude": -96.8635
+		},
+		"timestamp": 1673285036496
+	}
+}

@@ -15,15 +15,5 @@
     "theme": {
       "layout": "raw"
     }
-  },
-  "--Redoc": {
-    "title": "Redoc",
-    "type": "separator"
-  },
-  "redoc": {
-    "title": "Pages",
-    "theme": {
-      "layout": "full"
-    }
   }
 }
