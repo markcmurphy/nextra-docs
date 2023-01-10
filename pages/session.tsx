@@ -7,14 +7,14 @@ export default function Page() {
   return (
 
       <div className={styles.signedInStatus}>
-        <p
+        <div
           className={`nojs-show ${
             !session && loading ? styles.loading : styles.loaded
           }`}
         >
           {!session && (
             <>
-              <span>You are not signed in</span>
+              {/* <span>You are not signed in</span> */}
               <button className={`${styles.button} ${styles.buttonPrimary}`}>
                 <a
                   href={`/api/auth/signin`}
@@ -53,7 +53,7 @@ export default function Page() {
               </a>
             </>
           )}
-        </p>
+        </div>
       </div>
   );
 }

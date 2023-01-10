@@ -1,5 +1,5 @@
 import { signIn, signOut, useSession } from 'next-auth/react';
-import styles from '../components/Navbar/navbar.module.css';
+import styles from './session.module.css';
 
 export default function Page() {
   const { data: session, status } = useSession();
@@ -13,7 +13,7 @@ export default function Page() {
       >
         {!session && (
           <>
-            <span>You are not signed in</span>
+            {/* <span>You are not signed in</span> */}
             <button className={`${styles.button} ${styles.buttonPrimary}`}>
               <a
                 href={`/api/auth/signin`}
