@@ -6400,12 +6400,10 @@ https://next-auth.js.org/errors#no_secret`);
       return _server.NextResponse.redirect(signInUrl);
     }
     function withAuth2(...args) {
-      console.log("args", args[0]);
       if (!args.length || args[0] instanceof Request) {
         return handleMiddleware(...args);
       }
       if (typeof args[0] === "function") {
-        console.log(typeof args[0]);
         const middleware = args[0];
         const options2 = args[1];
         return async (...args2) => await handleMiddleware(args2[0], options2, async (token) => {
@@ -6418,7 +6416,6 @@ https://next-auth.js.org/errors#no_secret`);
       const options = args[0];
       return async (...args2) => await handleMiddleware(args2[0], options);
     }
-    console.log("\u{1F680} ~ file: middleware.js:83 ~ withAuth", withAuth2);
     var _default = withAuth2;
     exports.default = _default;
   }
@@ -6499,17 +6496,11 @@ var import_middleware = __toESM(require_middleware2());
 var middleware_default = (0, import_middleware.withAuth)({
   callbacks: {
     authorized({ req, token }) {
-      console.log("\u{1F680} ~ file: middleware.ts:6 ~ authorized: ~ token", token);
-      const pathname = req.nextUrl.pathname;
-      if (pathname.startsWith("/_next") || pathname === "/favicon.ico")
-        return true;
-      if (token)
-        return true;
-      return false;
+      return !!token;
     }
   }
 });
-var config = { matcher: ["/betas/path*"] };
+var config = { matcher: ["/betas/path:*"] };
 export {
   config,
   middleware_default as default
